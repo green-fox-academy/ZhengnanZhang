@@ -1,0 +1,50 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #F05408;
+
+}
+div#header{
+    background-color: black;
+    font-size: 25px;
+    color: white;
+    height: 40px;
+    line-height: 40px;
+    
+}
+div#question{
+    font-size: 30px;
+    color:black;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    font-weight: bold;
+    width: 600px;
+}
+div#chosen{
+    font-size: 30px;
+    color:black;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    width: 600px;
+    
+}
+a{
+    background-color: yellow;
+    margin: 10px;
+    padding: 10px;
+    text-decoration: none;
+}
+div#tips{
+    height: 30px;
+    font-weight: bold;
+    line-height: 30px;
+    font-size: 25px;
+    padding: 20px;
+}

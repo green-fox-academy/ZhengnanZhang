@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+div{
+    margin: 10px;
+    width: 400px;
+    font-size: 50px;
+    border-style: solid;
+    border-color:#4285F4;
+    border-width: 20px;
+}
+p.first{
+    background-color:#E67676;
+    margin: 0;
+    padding:5px;
+    font-size: 50px;
+    color: #FEF7F5;
+    height: 150px;
+    text-align: center;
+    line-height: 150px;
+}
+p.second{
+    background-color:#A9E6E6;
+    margin: 0;
+    padding:5px;
+    font-size: 50px;
+    color: #FEF7F5;
+    height: 150px;
+    text-align: center;
+    line-height: 150px;
+}
