@@ -1,0 +1,23 @@
+.container{
+    background: radial-gradient(#D46F3D,#D26E3D);
+    width: 500px;
+    height: 300px;
+}
+div.button{
+    margin-top: 150px;
+    margin-left: 150px;
+    
+    float: left;
+}
+.ok{
+    background: -webkit-linear-gradient(left, #47478B , #5F5FB9);
+    width: 80px;
+    height: 20px;
+}
+button.cancel{
+    background: -webkit-linear-gradient(left, #A9A60F , #E8E414);
+    
+    width: 80px;
+    height: 20px;
+    
+}

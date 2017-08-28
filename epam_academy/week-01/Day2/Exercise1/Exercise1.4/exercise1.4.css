@@ -1,0 +1,15 @@
+.green{
+    background-color: #51D400;
+    height: 100px;
+}
+.yellow{
+    background-color: #FFD62A;
+    height:100px;
+}
+.purple{
+    background-color: #B02AFF;
+    height: 200px;
+}
+.item{
+    width: 100%;
+}

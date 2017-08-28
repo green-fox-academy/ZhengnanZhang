@@ -1,0 +1,16 @@
+.container{
+    background: radial-gradient(#D14906,#E14E07);
+    width: 500px;
+    height: 500px;
+    
+}
+.middle{
+    background: radial-gradient(#C4693D,#CC6C3D);
+    width: 200px;
+    height: 200px;
+    margin-top: 150px;
+    margin-left: 150px;
+    box-shadow: 1px 1px 1px 1px #000 ;
+    border-radius: 15px;
+    opacity: 0.7;
+}

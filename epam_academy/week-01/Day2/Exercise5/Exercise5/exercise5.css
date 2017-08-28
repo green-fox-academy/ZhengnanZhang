@@ -1,0 +1,12 @@
+div{
+    height: 50px;
+}
+div[data-count = "10"],div[data-count = "11"]{
+    background-color: #666
+}
+div[data-count = "5"],div[data-count = "17"]{
+    background-color: #999
+}
+div[data-count = "13"]{
+    background-color: #CCC
+}

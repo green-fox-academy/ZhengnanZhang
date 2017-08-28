@@ -1,0 +1,11 @@
+div{
+    height: 50px;
+    background-color: #666666
+}
+div:nth-child(1){
+    background-color: #333333
+}
+
+div:nth-child(5){
+    background-color: #999999
+}

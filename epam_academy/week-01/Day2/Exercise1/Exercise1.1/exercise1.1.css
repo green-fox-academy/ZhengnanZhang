@@ -1,0 +1,14 @@
+.green{
+    background-color: #51D400
+}
+.yellow{
+    background-color: #FFD62A
+}
+.purple{
+    background-color: #B02AFF
+}
+.item{
+    float: left;
+    width: 33%;
+    height: 300px;
+}
