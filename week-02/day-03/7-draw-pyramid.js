@@ -12,6 +12,6 @@ var lineCount = 4;
 // *******
 //
 // The pyramid should have as many lines as lineCount is
-for (var i = 1;i<lineCount+1;i++) {
-    console.log(" ".repeat(lineCount-i)+"*".repeat((i-1)*2+1));
+for (var i = 1; i < lineCount + 1; i++) {
+	console.log(" ".repeat(lineCount - i) + "*".repeat((i - 1) * 2 + 1));
 }

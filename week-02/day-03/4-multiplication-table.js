@@ -1,8 +1,8 @@
 'use strict';
 
 var number = 15;
-for (var i = 1;i<number+1;i++) {
-    console.log(i+" * "+number+" ="+i*number)
+for (var i = 1; i < number + 1; i++) {
+	console.log(i + " * " + number + " =" + i * number)
 }
 // Create a program that
 // prints the multiplication table with number

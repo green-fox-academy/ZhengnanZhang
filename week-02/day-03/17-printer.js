@@ -4,8 +4,8 @@
 //   which logs to the console the input parameters
 //   (can have multiple number of arguments)
 function printer(number) {
-    for(var i =0; i< arguments.length;i++){
-    console.log(arguments[i]);
-    }
+	for (var i = 0; i < arguments.length; i++) {
+		console.log(arguments[i]);
+	}
 }
-printer(1,2,3);
+printer(1, 2, 3);

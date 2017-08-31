@@ -7,9 +7,9 @@
 // - Greet `al`
 var al = "EPAM";
 function greet(al = "al") {
-    if (al !== "al") {
-    al = "Greetings, dear " + al;
-    }
-    console.log(al);
+	if (al !== "al") {
+		al = "Greetings, dear " + al;
+	}
+	console.log(al);
 }
 greet(al);

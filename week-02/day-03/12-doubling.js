@@ -4,7 +4,7 @@
 // - Create a function called `doubling` that doubles it's input parameter
 // - Log the result of `doubling(ak)` to the console
 var ak = 123;
-function doubling (double){
-    console.log(2*double);
+function doubling(double) {
+	console.log(2 * double);
 }
 doubling(ak);

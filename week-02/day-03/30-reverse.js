@@ -7,13 +7,13 @@
 //		- do it with creating a new temp array and a loop
 // - Print the elements of the reversed `aj`
 //Solution 1
- var aj = [3,4,5,6,7];
+var aj = [3, 4, 5, 6, 7];
 // console.log(aj.reverse());
 
 //Solution 2
 var temp1 = [];
-for (var i = aj.length-1;i>=0;i--) {
-    temp1[aj.length-1-i] = aj[i];
+for (var i = aj.length - 1; i >= 0; i--) {
+	temp1[aj.length - 1 - i] = aj[i];
 }
 console.log(temp1);
 

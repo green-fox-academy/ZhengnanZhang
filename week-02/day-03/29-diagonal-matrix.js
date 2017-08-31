@@ -14,7 +14,7 @@
 // ** Relax, a matrix is just like an array
 var elements = 7;
 for (var i = 0; i < elements; i++) {
-    var line = new Array(elements).fill(0);
-    line[elements-1-i] = 1;
-    console.log(line);
+	var line = new Array(elements).fill(0);
+	line[elements - 1 - i] = 1;
+	console.log(line);
 }
