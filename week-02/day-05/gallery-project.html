@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="gallery-project.css">
+</head>
+
+<body>
+  <div class="slideshow-container">
+    <div class="mySlides fade">
+      <img src="./img/1.jpg" >
+      <div class="discription">
+        <h1>Lion</h1>
+        <p>Very stong, powerful, the king in the wild.</p>
+    </div>
+    </div>
+
+    <div class="mySlides fade">
+      <img src="./img/2.jpg" style="width:100%">
+      <div class="discription">
+        <h1>Mouse</h1>
+        <p>Very little things, and so cute.</p>
+    </div>
+    </div>
+
+    <div class="mySlides fade">
+      <img src="./img/3.jpg" style="width:100%">
+      <div class="discription">
+        <h1>I don't know what is this</h1>
+        <p>Looks like leopard, but I'm not sure.</p>
+    </div>
+      
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+  </div>
+  <br>
+
+  <div style="text-align:center">
+    
+    <span class="dot">
+    <img src="./img/1.jpg" class="dot1" onclick="currentSlide(1)">
+    
+    </span>
+    <span class="dot">
+        <img src="./img/2.jpg" class="dot1" onclick="currentSlide(2)">
+    </span>
+    <span class="dot">
+        <img src="./img/3.jpg" class="dot1" onclick="currentSlide(3)">
+    </span>
+  </div>
+  <script src="gallery-project.js"></script>
+</body>
+
+</html>

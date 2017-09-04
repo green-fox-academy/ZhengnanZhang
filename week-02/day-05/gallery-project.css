@@ -1,0 +1,156 @@
+* {box-sizing:border-box}
+body {
+  margin-top: 30px;
+  font-family: Verdana,sans-serif;
+  background-color: grey;
+  background: radial-gradient(ellipse farthest-corner, white, #D6D6D6 50%, grey);
+  }
+.mySlides {
+  display:none;
+  position: relative;
+  margin: auto 40px;
+  font-size: 0;
+  max-height: 450px;
+  max-width: 800px;
+}
+.mySlides>img {
+  width: 800px;
+  height: 450px;
+}
+ 
+/* 幻灯片容器 */
+.slideshow-container {
+  max-width: 880px;
+  max-height: 450px;
+  position: relative;
+  margin: auto ;
+  background-color: #fff;
+  box-shadow: 2px 2px 5px #000;
+}
+.discription {
+  position: absolute;
+  bottom: 0px;
+  height: 80px;
+  width: 100%;
+  background-color: #000;
+  opacity: 0.5;
+  color: #fff;
+  margin: 0;
+  font-size: 16px;
+} 
+h1 {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  opacity: 0.5;
+}
+p {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  opacity: 0.5;
+}
+/* 下一张 & 上一张 按钮 */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: grey;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+}
+.prev {
+  left: 0px;
+} 
+/* 定位 "下一张" 按钮靠右 */
+.next {
+  right: 0px;
+}
+ 
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  color: rgba(0,0,0,0.8);
+}
+ 
+ 
+/* .img1 {
+  background-image: url(./img/1.jpg);
+}
+
+.img2 {
+  background-image: url(./img/2.jpg);
+}
+
+.img3 {
+  background-image: url(./img/3.jpg);
+} */
+
+span {
+  padding-top: 13px;
+  border: 0;
+  margin: 0;
+  font-size: 0;
+}
+span.dot {
+  /* background: url("./img/arrow.png") center top no-repeat; */
+  border: 0;
+}
+/* 标记符号 */
+.dot {
+  cursor:pointer;
+  height: 100px;
+  width: 100px;
+  margin: 0 0px;
+  background-size: 100px 100px;
+  border: 2px solid #fff;
+  
+  /* background-color: #bbb; */
+  
+  display: inline-block; 
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover{
+  background: url("./img/arrow.png") center top no-repeat;
+}
+span>img {
+  cursor:pointer;
+  height: 100px;
+  width: 100px;
+  margin: 0 0px;
+  background-size: 100px 100px;
+  border: 3px solid #fff;
+  box-shadow: 2px 2px 5px #000;
+  /* background-color: #bbb; */
+  
+  display: inline-block; 
+  transition: background-color 0.6s ease;
+  border-radius: 5px;
+}
+
+
+.active, .dot:hover {
+  /* border: 3px solid #000; */
+}
+ 
+/* 淡出动画 */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+ 
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+ 
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
