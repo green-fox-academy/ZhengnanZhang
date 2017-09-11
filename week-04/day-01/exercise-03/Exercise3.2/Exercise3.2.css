@@ -1,0 +1,18 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.container {
+  display: flex;
+  background: yellow;
+  height: 800px;
+  align-items: center;
+  justify-content: space-between;
+}
+.item {
+  background: purple;
+  width: 100px;
+  height: 100px;
+  list-style-type: none;
+  /* margin-right: 20px; */
+}

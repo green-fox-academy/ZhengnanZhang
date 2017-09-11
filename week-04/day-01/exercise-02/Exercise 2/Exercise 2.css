@@ -1,0 +1,13 @@
+.yellow {
+  display: flex;
+  background: yellow;
+  width: 800px;
+  height: 600px;
+ justify-content: center;
+ align-items: center;
+}
+.purple {
+  background: purple;
+  width: 200px;
+  height: 200px;
+}
