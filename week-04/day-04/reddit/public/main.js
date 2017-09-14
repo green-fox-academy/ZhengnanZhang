@@ -1,6 +1,6 @@
 'use strict';
 window.addEventListener('load',init);
-var url = 'https://time-radish.glitch.me/posts';
+var url = 'http://localhost:8080/posts';
 function init() {
   fetch(url).then(function(response) {
       // console.log(response.json());
@@ -36,7 +36,7 @@ function formatTime(seconds) {
 //change the vote number using put
 function changeVoteNum(id,state) {
   var state = "/"+state;
-  fetch('https://time-radish.glitch.me'+'/posts/'+id+state,{
+  fetch('http://localhost:8080'+'/posts/'+id+state,{
     method:'put',
     headers:{
       'Accept':'application/json',
@@ -47,12 +47,13 @@ function changeVoteNum(id,state) {
 
 //delete posts
 function deleteElement(id) {
-  fetch('https://time-radish.glitch.me'+'/posts/'+id,{
+  fetch('http://localhost:8080'+'/posts/'+id,{
     method:"delete",
     headers:{
       'Accept':'application/json',
     }
   }).then(function(response) {
+    console.log(response);
     window.location.reload();
   })
 }
@@ -61,7 +62,7 @@ function deleteElement(id) {
 function loadPage (data) {
   var content = document.getElementById("content");
   for(let i = 0;i<data.length;i++) {
-    console.log(data);
+    // console.log(data);
     sessionStorage.setItem(data[i].id,`${data[i].href} title:${data[i].title}`);
     var message_container = document.createElement('div');
     message_container.setAttribute('class','message_container');
@@ -83,13 +84,13 @@ function loadPage (data) {
 // change the vote number in my homepage
     upvote.addEventListener('click',function(event) {
       console.log(event);
-      if (event.target.src === "file:///Users/yananzhang/Desktop/Zhengnan_Zhang_EPAM_JSA/week-03/day-04/The%20Reddit:Frontend/img/upvote.png") {
-      event.target.src = "./img/upvoted.png";
+      if (event.target.src === "http://localhost:8080/img/upvote.png") {
+      event.target.src = "http://localhost:8080/img/upvoted.png";
       var number = event.path[1].children[1].innerText;
       event.path[1].children[1].innerText = parseInt(number)+1;
       }
       else {
-        event.target.src = "./img/upvote.png";
+        event.target.src = "http://localhost:8080/img/upvote.png";
         var number = event.path[1].children[1].innerText;
         event.path[1].children[1].innerText = parseInt(number)-1;
       }
@@ -108,13 +109,13 @@ function loadPage (data) {
     downvote.src = "./img/downvote.png";
     downvote.setAttribute('class','downvote');
     downvote.addEventListener('click',function(event) {
-      if (event.target.src === "file:///Users/yananzhang/Desktop/Zhengnan_Zhang_EPAM_JSA/week-03/day-04/The%20Reddit:Frontend/img/downvote.png") {
-      event.target.src = "./img/downvoted.png";
+      if (event.target.src === "http://localhost:8080/img/downvote.png") {
+      event.target.src = "http://localhost:8080/img/downvoted.png";
       var number = event.path[1].children[1].innerText;
       event.path[1].children[1].innerText = parseInt(number)-1;
       }
       else {
-        event.target.src = "./img/downvote.png";
+        event.target.src = "http://localhost:8080/img/downvote.png";
         var number = event.path[1].children[1].innerText;
         event.path[1].children[1].innerText = parseInt(number)+1;
       }

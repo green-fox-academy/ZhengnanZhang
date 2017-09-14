@@ -4,20 +4,23 @@ var buttonElements = [
   'Button 0',
   'Button 1',
   'Button 2'
-].map(function(buttonText) {
+].map(function (buttonText) {
   var buttonElement;
   buttonElement = document.createElement('button');
   buttonElement.appendChild(document.createTextNode(buttonText));
   return buttonElement;
 });
 
+function createListener(i) {
+  return function () {
+    console.log('button index: ', i);
+  };
+}
+
+
 function appendButtons() {
-  for(var i = 0; i < buttonElements.length; i++) {
-    (function(i) {
-    buttonElements[i].addEventListener('click', function() {
-      console.log('button index: ', i);
-    });
-  })(i);
+  for (var i = 0; i < buttonElements.length; i++) {
+    buttonElements[i].addEventListener('click', createListener(i));
     document.body.appendChild(buttonElements[i]);
   }
 }

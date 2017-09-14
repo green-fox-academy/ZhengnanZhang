@@ -1,7 +1,8 @@
+'use strict';
 var xhr = new XMLHttpRequest();
-
+//define the API key at the top
 xhr.onreadystatechange = function () {
-  if (xhr.readyState == 4 && xhr.status == 200) {
+  if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
     var slideIndex = 1;
     var pic = JSON.parse(xhr.responseText);
     console.log(pic);
@@ -11,12 +12,15 @@ xhr.onreadystatechange = function () {
 
 
 function display(pic) {
+  //do not use ID
   var picture = document.getElementById("thumbnail");
   var pic1 = document.getElementById("pic");
 
-  for (let i = 0; i < 16; i++) {
+  for (let i = 0; i < pic.data.length; i++) {
     var image = document.createElement("img");
     image.src = pic.data[i].images.downsized_still.url;
+    image.setAttribute('data-original-url', '');
+    image.setAttribute('data-still-url', '');
     image.addEventListener("click", function (event) {
       if (pic1.src === pic.data[i].images.original.url) {
         pic1.src = pic.data[i].images.downsized_still.url;

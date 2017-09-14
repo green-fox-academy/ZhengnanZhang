@@ -1,0 +1,6 @@
+01 db.restaurants.find({},{name:1, borough:1, cuisin:1,restaurant_id:1}).pretty()
+02 db.restaurants.find({},{_id:0, name:1, borough:1, cuisin:1,restaurant_id:1}).pretty()
+03 db.restaurants.find({},{_id:0, name:1, borough:1, cuisin:1, restaurant_id:1, 'address.zipcode':1}).pretty()
+04 db.restaurants.find({ borough:'Bronx'}).pretty()
+05 db.restaurants.find({ borough:'Bronx'}).limit(5).pretty()
+06 db.restaurants.find({ borough:'Bronx'}).skip(5).limit(5).pretty()

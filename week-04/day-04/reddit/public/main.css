@@ -1,0 +1,73 @@
+header {
+  height: 20px;
+  background: #F0F0F0;
+  border-bottom: 1px solid #6D8296;
+  font-size: 15px;
+}
+.right {
+  float: right;
+  font-size: 10px;
+  line-height: 20px;
+  font-weight: bold;
+  color: black;
+}
+.message_container {
+  background:white;
+  height: 80px;
+  position: relative;
+}
+.index {
+  line-height: 80px;
+  float: left;
+}
+.vote_container {
+  float: left;
+  height: 100%;
+  width: 50px;
+  text-align: center;
+}
+.upvote {
+  /* padding-right: 10px;
+  padding-left: 12px; */
+  padding-top: 13px;
+}
+.vote_num {
+  display: block;
+}
+.downvote {
+  /* padding-left: 5px; */
+  padding-top: 3px;
+}
+.title_container {
+  float: left;
+  height: 100%;
+  width: 480px;
+  position: relative;
+}
+.title {
+  position: absolute;
+  top: 10px;
+  color: blue;
+}
+
+.past_time {
+  position: absolute;
+  top: 32px;
+  font-size: 13px;
+  
+}
+.modify {
+  position: absolute;
+  top: 55px;
+  text-decoration: none;
+}
+.remove {
+  position: absolute;
+  top: 55px;
+  left: 65px;
+  text-decoration: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
