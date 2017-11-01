@@ -1,0 +1,48 @@
+submitHandler(ev) {
+    this.state = {
+      'status': 'being',
+      'error': '',
+      'errorUsername': false,
+      'errorEmail': false,
+      'errorPhone': false,
+      'errorFullname': false,
+      'errorPassword': false,
+    };
+    ev.preventDefault();
+    let obj = {
+      'username': ev.target.elements.namedItem('username').value,
+      'email': ev.target.elements.namedItem('email').value,
+      'phone number': ev.target.elements.namedItem('phone').value,
+      'full name': ev.target.elements.namedItem('fullname').value,
+      'password': ev.target.elements.namedItem('password').value,
+    };
+    let jsonData = JSON.stringify(obj);
+
+    this.sendData(jsonData);
+  }
+   sendData(jsonData) {
+    let xhr = new XMLHttpRequest();
+
+    xhr.addEventListener('readystatechange', function() {
+      if (xhr.readyState === XMLHttpRequest.DONE) {
+        this.setState({'status': 'being'});
+        if (xhr.status === statusCodes.success) {
+          const resultObj = JSON.parse(xhr.responseText);
+
+          this.signupSuccess(resultObj);
+        }
+        this.judge409Error(xhr);
+        this.judge400Error(xhr);
+        this.judge500Error(xhr);
+      }
+    }.bind(this));
+    this.xhrSet(xhr);
+    this.setState({'status': 'loading'});
+    xhr.send(jsonData);
+  }
+
+  xhrSet(xhr) {
+    xhr.open('POST', '/api/signup');
+    xhr.setRequestHeader('Accept', 'application/json');
+    xhr.setRequestHeader('Content-Type', 'application/json');
+  }
