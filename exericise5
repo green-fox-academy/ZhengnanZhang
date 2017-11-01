@@ -1,0 +1,24 @@
+a = [1,2,3]
+b = [1,2]
+
+function compare(a,b){
+  let c = b;
+  let d = [];
+  a.forEach(function(element) {
+    b.forEach(function(element2,index){
+      if (element === element2){
+        d.push(element2);
+        b.splice(index,1);
+        return;
+      }
+    })
+  });
+  if (b.length === 0 && d.length === a.length){
+    return true
+  }
+  else {
+    return false
+  }
+}
+let success = compare(a,b)
+console.log(success);
